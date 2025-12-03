@@ -8,10 +8,10 @@
  *   bun run scripts/optimize-icons.ts --dry-run # Preview without modifying
  */
 
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { optimize } from 'svgo';
 import type { Config } from 'svgo';
+import { optimize } from 'svgo';
 
 const ICONS_DIR = './icons';
 const DRY_RUN = process.argv.includes('--dry-run');

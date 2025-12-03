@@ -48,11 +48,7 @@ export class SvgCache {
   /**
    * Get cached SVG if available
    */
-  async get(params: {
-    icons: string;
-    theme?: string;
-    perLine?: number;
-  }): Promise<string | null> {
+  async get(params: { icons: string; theme?: string; perLine?: number }): Promise<string | null> {
     const key = generateCacheKey(params);
     try {
       return await this.cache.get(key);
@@ -86,11 +82,7 @@ export class SvgCache {
   /**
    * Invalidate a cached SVG
    */
-  async invalidate(params: {
-    icons: string;
-    theme?: string;
-    perLine?: number;
-  }): Promise<void> {
+  async invalidate(params: { icons: string; theme?: string; perLine?: number }): Promise<void> {
     const key = generateCacheKey(params);
     try {
       await this.cache.delete(key);

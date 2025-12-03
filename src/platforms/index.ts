@@ -4,6 +4,12 @@
  * Re-exports all platform adapters and types for easy consumption.
  */
 
+export type { CloudflareEnv } from './cloudflare.js';
+
+// Cloudflare
+export { cloudflareAdapter, createCloudflareContext } from './cloudflare.js';
+// Deno
+export { createDenoContext, createDenoHandler, denoAdapter } from './deno.js';
 // Types
 export type {
   AnalyticsEvent,
@@ -13,14 +19,6 @@ export type {
   PlatformEnv,
   RequestContext,
 } from './types.js';
-
-// Cloudflare
-export { cloudflareAdapter, createCloudflareContext } from './cloudflare.js';
-export type { CloudflareEnv } from './cloudflare.js';
-
+export type { VercelEnv } from './vercel.js';
 // Vercel
 export { createVercelContext, createVercelHandler, vercelAdapter } from './vercel.js';
-export type { VercelEnv } from './vercel.js';
-
-// Deno
-export { createDenoContext, createDenoHandler, denoAdapter } from './deno.js';

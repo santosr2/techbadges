@@ -9,7 +9,7 @@ import { handleApiIcons, handleApiSvgs } from './handlers/api.js';
 import { handleHealth } from './handlers/health.js';
 import { handleIcons } from './handlers/icons.js';
 import { createCorsPreflightResponse } from './lib/cache.js';
-import { NotFoundError, createErrorResponse } from './lib/errors.js';
+import { createErrorResponse, NotFoundError } from './lib/errors.js';
 import type { Env } from './types/index.js';
 
 /**

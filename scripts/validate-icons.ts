@@ -9,7 +9,7 @@
  * - Theme pair completeness
  */
 
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import type { ValidationError, ValidationResult, ValidationStats } from '../src/types/index.js';
 
@@ -209,12 +209,16 @@ function main(): void {
 
   if (errorList.length > 0) {
     console.log('\nErrors:');
-    errorList.forEach(e => console.log(`  ✗ ${e.file}: ${e.error}`));
+    for (const e of errorList) {
+      console.log(`  ✗ ${e.file}: ${e.error}`);
+    }
   }
 
   if (warningList.length > 0) {
     console.log('\nWarnings:');
-    warningList.forEach(w => console.log(`  ⚠ ${w.file}: ${w.error}`));
+    for (const w of warningList) {
+      console.log(`  ⚠ ${w.file}: ${w.error}`);
+    }
   }
 
   if (result.valid) {

@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'bun:test';
 import {
   AppError,
+  createErrorResponse,
   NotFoundError,
   RateLimitError,
   ValidationError,
-  createErrorResponse,
 } from '../../src/lib/errors.js';
 
 describe('AppError', () => {

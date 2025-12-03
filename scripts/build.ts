@@ -6,10 +6,10 @@
  * - dist/metadata.json: Icon metadata for API
  */
 
-import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ALIASES } from '../src/config/aliases.js';
-import { type IconCategory, getIconCategory } from '../src/config/categories.js';
+import { getIconCategory, type IconCategory } from '../src/config/categories.js';
 
 interface IconMetadata {
   id: string;
@@ -190,12 +190,16 @@ async function build(): Promise<void> {
 
   if (stats.errors.length > 0) {
     console.log('\nErrors:');
-    stats.errors.forEach(e => console.log(`  ✗ ${e}`));
+    for (const e of stats.errors) {
+      console.log(`  ✗ ${e}`);
+    }
   }
 
   if (stats.warnings.length > 0) {
     console.log('\nWarnings:');
-    stats.warnings.forEach(w => console.log(`  ⚠ ${w}`));
+    for (const w of stats.warnings) {
+      console.log(`  ⚠ ${w}`);
+    }
   }
 
   // Exit with error if there were validation errors
