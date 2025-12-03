@@ -37,7 +37,8 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: deploy
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: deploy --env production
 
       - name: Health check
         run: |
