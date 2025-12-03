@@ -1,8 +1,32 @@
-name = "skill-icons"
-type = "webpack"
-route = ''
-zone_id = ''
-usage_model = ''
-compatibility_flags = []
-workers_dev = true
-compatibility_date = "2022-03-02"
+name = "techbadges"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Observability
+[observability]
+enabled = true
+
+# Production environment variables
+[vars]
+ENVIRONMENT = "production"
+
+# Development environment
+[env.development]
+vars = { ENVIRONMENT = "development" }
+
+# Staging environment (optional)
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
+
+# Build configuration
+[build]
+command = "bun run build"
+
+# Uncomment and configure for production deployment
+# route = { pattern = "techbadges.dev/*", zone_name = "techbadges.dev" }
+
+# Uncomment to enable KV caching (optional)
+# [[kv_namespaces]]
+# binding = "ICON_CACHE"
+# id = "your-kv-namespace-id"

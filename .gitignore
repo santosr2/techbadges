@@ -128,3 +128,6 @@ dist
 
 # Cloudflare Worker
 worker/
+
+# Claude Code local settings
+.claude/settings.local.json

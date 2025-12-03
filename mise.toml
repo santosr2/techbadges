@@ -1,0 +1,67 @@
+[env]
+# Ensure consistent environment across all developers
+_.path = ["./node_modules/.bin"]
+
+[tools]
+# Runtime
+bun = "1.1"
+
+# Additional tools managed by mise
+# biome is installed via bun, but we pin the version here for reference
+# wrangler is installed via bun as well
+
+[tasks.install]
+description = "Install dependencies"
+run = "bun install"
+
+[tasks.dev]
+description = "Start development server"
+run = "bun run dev"
+
+[tasks.build]
+description = "Build icons bundle"
+run = "bun run build"
+
+[tasks."build:optimize"]
+description = "Optimize SVGs and build"
+run = "bun run build:optimize"
+
+[tasks.lint]
+description = "Run Biome linter"
+run = "bun run lint"
+
+[tasks."lint:fix"]
+description = "Fix linting issues"
+run = "bun run lint:fix"
+
+[tasks.format]
+description = "Format code with Biome"
+run = "bun run format"
+
+[tasks.typecheck]
+description = "Run TypeScript type checking"
+run = "bun run typecheck"
+
+[tasks.test]
+description = "Run tests"
+run = "bun test"
+
+[tasks."test:watch"]
+description = "Run tests in watch mode"
+run = "bun test --watch"
+
+[tasks.validate]
+description = "Validate icons"
+run = "bun run validate:icons"
+
+[tasks."size-report"]
+description = "Generate icon size report"
+run = "bun run size-report"
+
+[tasks.deploy]
+description = "Deploy to Cloudflare Workers"
+run = "bun run deploy"
+
+[tasks.check]
+description = "Run all checks (lint, typecheck, test)"
+run = ["bun run lint", "bun run typecheck", "bun test"]

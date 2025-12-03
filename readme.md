@@ -1,11 +1,13 @@
-<p align="center"><img align="center" width="280" src="./.github/text-logo.svg#gh-dark-mode-only"/></p>
-<p align="center"><img align="center" width="280" src="./.github/text-logo-light.svg#gh-light-mode-only"/></p>
-<h3 align="center">Showcase your skills on your GitHub or resumé with ease!</h3>
+<h1 align="center">TechBadges</h1>
+<h3 align="center">Showcase your tech stack on your GitHub or resumé with ease!</h3>
+<h4 align="center">290+ technology icons for your README</h4>
 <hr>
 
-<h3 align="center">Powered by Cloudflare Workers ⚡</h3>
+<p align="center">
+  <em>A fork of <a href="https://github.com/tandpfun/skill-icons">skill-icons</a> by <a href="https://github.com/tandpfun">@tandpfun</a></em>
+</p>
 
-<h3>NOTE: To keep icons consistent and to ensure browser support, we don't accept pull requests for icon submissions. If you would like an icon added, please open an issue.<h3>
+<h3 align="center">Powered by Cloudflare Workers ⚡</h3>
 
 # Docs
 
@@ -28,10 +30,10 @@ Copy and paste the code block below into your readme to add the skills icon elem
 Change the `?i=js,html,css` to a list of your skills separated by ","s! You can find a full list of icons [here](#icons-list).
 
 ```md
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+[![My Skills](https://techbadges.dev/icons?i=js,html,css,wasm)](https://techbadges.dev)
 ```
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+[![My Skills](https://techbadges.dev/icons?i=js,html,css,wasm)](https://techbadges.dev)
 
 # Themed Icons
 
@@ -44,10 +46,10 @@ Change the `&theme=light` to either `dark` or `light`. The theme is the backgrou
 **Light Theme Example:**
 
 ```md
-[![My Skills](https://skillicons.dev/icons?i=java,kotlin,nodejs,figma&theme=light)](https://skillicons.dev)
+[![My Skills](https://techbadges.dev/icons?i=java,kotlin,nodejs,figma&theme=light)](https://techbadges.dev)
 ```
 
-[![My Skills](https://skillicons.dev/icons?i=java,kotlin,nodejs,figma&theme=light)](https://skillicons.dev)
+[![My Skills](https://techbadges.dev/icons?i=java,kotlin,nodejs,figma&theme=light)](https://techbadges.dev)
 
 # Icons Per Line
 
@@ -56,10 +58,10 @@ You can specify how many icons you would like per line! It's an optional argumen
 Change the `&perline=3` to any number between 1 and 50.
 
 ```md
-[![My Skills](https://skillicons.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=3)](https://skillicons.dev)
+[![My Skills](https://techbadges.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=3)](https://techbadges.dev)
 ```
 
-[![My Skills](https://skillicons.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=3)](https://skillicons.dev)
+[![My Skills](https://techbadges.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=3)](https://techbadges.dev)
 
 # Centering Icons
 
@@ -67,15 +69,15 @@ Want to center the icons in your readme? The SVGs are automatically resized, so 
 
 ```html
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+  <a href="https://techbadges.dev">
+    <img src="https://techbadges.dev/icons?i=git,kubernetes,docker,c,vim" />
   </a>
 </p>
 ```
 
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+  <a href="https://techbadges.dev">
+    <img src="https://techbadges.dev/icons?i=git,kubernetes,docker,c,vim" />
   </a>
 </p>
 
@@ -90,17 +92,21 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |      `actix`       |     <img src="./icons/Actix-Dark.svg" width="48">     |
 |      `adonis`      |       <img src="./icons/Adonis.svg" width="48">       |
 |        `ae`        |    <img src="./icons/AfterEffects.svg" width="48">    |
+|     `airbyte`      |    <img src="./icons/Airbyte-Dark.svg" width="48">    |
+|     `airflow`      |    <img src="./icons/Airflow-Dark.svg" width="48">    |
 |     `aiscript`     |   <img src="./icons/AiScript-Dark.svg" width="48">    |
 |     `alpinejs`     |   <img src="./icons/AlpineJS-Dark.svg" width="48">    |
 |     `anaconda`     |   <img src="./icons/Anaconda-Dark.svg" width="48">    |
 |  `androidstudio`   | <img src="./icons/AndroidStudio-Dark.svg" width="48"> |
 |     `angular`      |    <img src="./icons/Angular-Dark.svg" width="48">    |
 |     `ansible`      |      <img src="./icons/Ansible.svg" width="48">       |
+|    `anthropic`     |   <img src="./icons/Anthropic-Dark.svg" width="48">   |
 |      `apollo`      |       <img src="./icons/Apollo.svg" width="48">       |
 |      `apple`       |     <img src="./icons/Apple-Dark.svg" width="48">     |
 |     `appwrite`     |      <img src="./icons/Appwrite.svg" width="48">      |
 |       `arch`       |     <img src="./icons/Arch-Dark.svg" width="48">      |
 |     `arduino`      |      <img src="./icons/Arduino.svg" width="48">       |
+|      `argocd`      |    <img src="./icons/ArgoCD-Dark.svg" width="48">     |
 |      `astro`       |       <img src="./icons/Astro.svg" width="48">        |
 |       `atom`       |        <img src="./icons/Atom.svg" width="48">        |
 |        `au`        |      <img src="./icons/Audition.svg" width="48">      |
@@ -117,23 +123,33 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |       `bsd`        |      <img src="./icons/BSD-Dark.svg" width="48">      |
 |       `bun`        |      <img src="./icons/Bun-Dark.svg" width="48">      |
 |        `c`         |         <img src="./icons/C.svg" width="48">          |
-|        `cs`        |         <img src="./icons/CS.svg" width="48">         |
-|       `cpp`        |        <img src="./icons/CPP.svg" width="48">         |
-|     `crystal`      |    <img src="./icons/Crystal-Dark.svg" width="48">    |
 |    `cassandra`     |   <img src="./icons/Cassandra-Dark.svg" width="48">   |
+|     `circleci`     |   <img src="./icons/CircleCI-Dark.svg" width="48">    |
 |      `clion`       |     <img src="./icons/CLion-Dark.svg" width="48">     |
 |     `clojure`      |    <img src="./icons/Clojure-Dark.svg" width="48">    |
 |    `cloudflare`    |  <img src="./icons/Cloudflare-Dark.svg" width="48">   |
+|    `cloudwatch`    |  <img src="./icons/Cloudwatch-Dark.svg" width="48">   |
 |      `cmake`       |     <img src="./icons/CMake-Dark.svg" width="48">     |
 |     `codepen`      |    <img src="./icons/CodePen-Dark.svg" width="48">    |
 |   `coffeescript`   | <img src="./icons/CoffeeScript-Dark.svg" width="48">  |
+|      `colab`       |     <img src="./icons/Colab-Dark.svg" width="48">     |
+|    `confluence`    |  <img src="./icons/Confluence-Dark.svg" width="48">   |
+|      `consul`      |    <img src="./icons/Consul-Dark.svg" width="48">     |
+|       `cpp`        |        <img src="./icons/CPP.svg" width="48">         |
+|     `crystal`      |    <img src="./icons/Crystal-Dark.svg" width="48">    |
+|        `cs`        |         <img src="./icons/CS.svg" width="48">         |
 |       `css`        |        <img src="./icons/CSS.svg" width="48">         |
 |     `cypress`      |    <img src="./icons/Cypress-Dark.svg" width="48">    |
 |        `d3`        |      <img src="./icons/D3-Dark.svg" width="48">       |
+|     `dagster`      |    <img src="./icons/Dagster-Dark.svg" width="48">    |
 |       `dart`       |     <img src="./icons/Dart-Dark.svg" width="48">      |
+|    `databricks`    |  <img src="./icons/Databricks-Dark.svg" width="48">   |
+|     `datadog`      |    <img src="./icons/Datadog-Dark.svg" width="48">    |
+|       `dbt`        |      <img src="./icons/dbt-Dark.svg" width="48">      |
 |      `debian`      |    <img src="./icons/Debian-Dark.svg" width="48">     |
 |       `deno`       |     <img src="./icons/DENO-Dark.svg" width="48">      |
 |      `devto`       |     <img src="./icons/DevTo-Dark.svg" width="48">     |
+|   `digitalocean`   | <img src="./icons/DigitalOcean-Dark.svg" width="48">  |
 |     `discord`      |      <img src="./icons/Discord.svg" width="48">       |
 |       `bots`       |    <img src="./icons/DiscordBots.svg" width="48">     |
 |    `discordjs`     |   <img src="./icons/DiscordJS-Dark.svg" width="48">   |
@@ -161,44 +177,57 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 | `gamemakerstudio`  |  <img src="./icons/GameMakerStudio.svg" width="48">   |
 |      `gatsby`      |       <img src="./icons/Gatsby.svg" width="48">       |
 |       `gcp`        |      <img src="./icons/GCP-Dark.svg" width="48">      |
+|     `gherkin`      |    <img src="./icons/Gherkin-Dark.svg" width="48">    |
 |       `git`        |        <img src="./icons/Git.svg" width="48">         |
 |      `github`      |    <img src="./icons/Github-Dark.svg" width="48">     |
 |  `githubactions`   | <img src="./icons/GithubActions-Dark.svg" width="48"> |
+|    `gitkraken`     |   <img src="./icons/GitKraken-Dark.svg" width="48">   |
 |      `gitlab`      |    <img src="./icons/GitLab-Dark.svg" width="48">     |
 |      `gmail`       |     <img src="./icons/Gmail-Dark.svg" width="48">     |
-|     `gherkin`      |    <img src="./icons/Gherkin-Dark.svg" width="48">    |
+|      `godot`       |     <img src="./icons/Godot-Dark.svg" width="48">     |
 |        `go`        |       <img src="./icons/GoLang.svg" width="48">       |
 |      `gradle`      |    <img src="./icons/Gradle-Dark.svg" width="48">     |
-|      `godot`       |     <img src="./icons/Godot-Dark.svg" width="48">     |
 |     `grafana`      |    <img src="./icons/Grafana-Dark.svg" width="48">    |
 |     `graphql`      |    <img src="./icons/GraphQL-Dark.svg" width="48">    |
 |       `gtk`        |      <img src="./icons/GTK-Dark.svg" width="48">      |
 |       `gulp`       |        <img src="./icons/Gulp.svg" width="48">        |
+|      `harbor`      |    <img src="./icons/Harbor-Dark.svg" width="48">     |
 |     `haskell`      |    <img src="./icons/Haskell-Dark.svg" width="48">    |
 |       `haxe`       |     <img src="./icons/Haxe-Dark.svg" width="48">      |
 |    `haxeflixel`    |  <img src="./icons/HaxeFlixel-Dark.svg" width="48">   |
+|       `helm`       |     <img src="./icons/Helm-Dark.svg" width="48">      |
 |      `heroku`      |       <img src="./icons/Heroku.svg" width="48">       |
 |    `hibernate`     |   <img src="./icons/Hibernate-Dark.svg" width="48">   |
 |       `html`       |        <img src="./icons/HTML.svg" width="48">        |
 |       `htmx`       |     <img src="./icons/Htmx-Dark.svg" width="48">      |
+|   `huggingface`    |  <img src="./icons/HuggingFace-Dark.svg" width="48">  |
 |       `idea`       |     <img src="./icons/Idea-Dark.svg" width="48">      |
 |        `ai`        |    <img src="./icons/Illustrator.svg" width="48">     |
+|     `insomnia`     |   <img src="./icons/Insomnia-Dark.svg" width="48">    |
 |    `instagram`     |     <img src="./icons/Instagram.svg" width="48">      |
 |       `ipfs`       |     <img src="./icons/IPFS-Dark.svg" width="48">      |
+|      `istio`       |     <img src="./icons/Istio-Dark.svg" width="48">     |
 |       `java`       |     <img src="./icons/Java-Dark.svg" width="48">      |
 |        `js`        |     <img src="./icons/JavaScript.svg" width="48">     |
 |     `jenkins`      |    <img src="./icons/Jenkins-Dark.svg" width="48">    |
 |       `jest`       |        <img src="./icons/Jest.svg" width="48">        |
+|       `jira`       |     <img src="./icons/Jira-Dark.svg" width="48">      |
 |      `jquery`      |       <img src="./icons/JQuery.svg" width="48">       |
+|      `julia`       |     <img src="./icons/Julia-Dark.svg" width="48">     |
+|     `jupyter`      |    <img src="./icons/Jupyter-Dark.svg" width="48">    |
 |      `kafka`       |       <img src="./icons/Kafka.svg" width="48">        |
 |       `kali`       |     <img src="./icons/Kali-Dark.svg" width="48">      |
 |      `kotlin`      |    <img src="./icons/Kotlin-Dark.svg" width="48">     |
 |       `ktor`       |     <img src="./icons/Ktor-Dark.svg" width="48">      |
+|     `kubeflow`     |   <img src="./icons/Kubeflow-Dark.svg" width="48">    |
 |    `kubernetes`    |     <img src="./icons/Kubernetes.svg" width="48">     |
+|    `langchain`     |   <img src="./icons/LangChain-Dark.svg" width="48">   |
 |     `laravel`      |    <img src="./icons/Laravel-Dark.svg" width="48">    |
 |      `latex`       |     <img src="./icons/LaTeX-Dark.svg" width="48">     |
 |       `less`       |     <img src="./icons/Less-Dark.svg" width="48">      |
 |     `linkedin`     |      <img src="./icons/LinkedIn.svg" width="48">      |
+|     `linkerd`      |    <img src="./icons/Linkerd-Dark.svg" width="48">    |
+|      `linode`      |    <img src="./icons/Linode-Dark.svg" width="48">     |
 |      `linux`       |     <img src="./icons/Linux-Dark.svg" width="48">     |
 |       `lit`        |      <img src="./icons/Lit-Dark.svg" width="48">      |
 |       `lua`        |      <img src="./icons/Lua-Dark.svg" width="48">      |
@@ -207,13 +236,17 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |    `materialui`    |  <img src="./icons/MaterialUI-Dark.svg" width="48">   |
 |      `matlab`      |    <img src="./icons/Matlab-Dark.svg" width="48">     |
 |      `maven`       |     <img src="./icons/Maven-Dark.svg" width="48">     |
+|     `metabase`     |   <img src="./icons/Metabase-Dark.svg" width="48">    |
 |       `mint`       |     <img src="./icons/Mint-Dark.svg" width="48">      |
+|       `miro`       |     <img src="./icons/Miro-Dark.svg" width="48">      |
 |     `misskey`      |    <img src="./icons/Misskey-Dark.svg" width="48">    |
+|      `mlflow`      |    <img src="./icons/MLflow-Dark.svg" width="48">     |
 |     `mongodb`      |      <img src="./icons/MongoDB.svg" width="48">       |
 |      `mysql`       |     <img src="./icons/MySQL-Dark.svg" width="48">     |
 |      `neovim`      |    <img src="./icons/NeoVim-Dark.svg" width="48">     |
 |      `nestjs`      |    <img src="./icons/NestJS-Dark.svg" width="48">     |
 |     `netlify`      |    <img src="./icons/Netlify-Dark.svg" width="48">    |
+|     `newrelic`     |   <img src="./icons/NewRelic-Dark.svg" width="48">    |
 |      `nextjs`      |    <img src="./icons/NextJS-Dark.svg" width="48">     |
 |      `nginx`       |       <img src="./icons/Nginx.svg" width="48">        |
 |       `nim`        |      <img src="./icons/Nim-Dark.svg" width="48">      |
@@ -221,14 +254,20 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |      `nodejs`      |    <img src="./icons/NodeJS-Dark.svg" width="48">     |
 |      `notion`      |    <img src="./icons/Notion-Dark.svg" width="48">     |
 |       `npm`        |      <img src="./icons/Npm-Dark.svg" width="48">      |
+|      `numpy`       |     <img src="./icons/NumPy-Dark.svg" width="48">     |
 |      `nuxtjs`      |    <img src="./icons/NuxtJS-Dark.svg" width="48">     |
 |     `obsidian`     |   <img src="./icons/Obsidian-Dark.svg" width="48">    |
 |      `ocaml`       |       <img src="./icons/OCaml.svg" width="48">        |
 |      `octave`      |    <img src="./icons/Octave-Dark.svg" width="48">     |
+|      `ollama`      |    <img src="./icons/Ollama-Dark.svg" width="48">     |
+|      `openai`      |    <img src="./icons/OpenAI-Dark.svg" width="48">     |
 |      `opencv`      |    <img src="./icons/OpenCV-Dark.svg" width="48">     |
 |    `openshift`     |     <img src="./icons/OpenShift.svg" width="48">      |
 |    `openstack`     |   <img src="./icons/OpenStack-Dark.svg" width="48">   |
 |       `p5js`       |        <img src="./icons/p5js.svg" width="48">        |
+|      `packer`      |    <img src="./icons/Packer-Dark.svg" width="48">     |
+|    `pagerduty`     |   <img src="./icons/PagerDuty-Dark.svg" width="48">   |
+|      `pandas`      |    <img src="./icons/Pandas-Dark.svg" width="48">     |
 |       `perl`       |        <img src="./icons/Perl.svg" width="48">        |
 |        `ps`        |     <img src="./icons/Photoshop.svg" width="48">      |
 |       `php`        |      <img src="./icons/PHP-Dark.svg" width="48">      |
@@ -237,15 +276,19 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |       `pkl`        |      <img src="./icons/Pkl-Dark.svg" width="48">      |
 |      `plan9`       |     <img src="./icons/Plan9-Dark.svg" width="48">     |
 |   `planetscale`    |  <img src="./icons/PlanetScale-Dark.svg" width="48">  |
+|      `plotly`      |    <img src="./icons/Plotly-Dark.svg" width="48">     |
 |       `pnpm`       |     <img src="./icons/Pnpm-Dark.svg" width="48">      |
 |     `postgres`     |  <img src="./icons/PostgreSQL-Dark.svg" width="48">   |
 |     `postman`      |      <img src="./icons/Postman.svg" width="48">       |
+|     `powerbi`      |    <img src="./icons/PowerBI-Dark.svg" width="48">    |
 |    `powershell`    |  <img src="./icons/Powershell-Dark.svg" width="48">   |
+|     `prefect`      |    <img src="./icons/Prefect-Dark.svg" width="48">    |
 |        `pr`        |      <img src="./icons/Premiere.svg" width="48">      |
 |      `prisma`      |       <img src="./icons/Prisma.svg" width="48">       |
 |    `processing`    |  <img src="./icons/Processing-Dark.svg" width="48">   |
 |    `prometheus`    |     <img src="./icons/Prometheus.svg" width="48">     |
 |       `pug`        |      <img src="./icons/Pug-Dark.svg" width="48">      |
+|      `pulumi`      |    <img src="./icons/Pulumi-Dark.svg" width="48">     |
 |     `pycharm`      |    <img src="./icons/PyCharm-Dark.svg" width="48">    |
 |        `py`        |    <img src="./icons/Python-Dark.svg" width="48">     |
 |     `pytorch`      |    <img src="./icons/PyTorch-Dark.svg" width="48">    |
@@ -253,6 +296,7 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |        `r`         |       <img src="./icons/R-Dark.svg" width="48">       |
 |     `rabbitmq`     |   <img src="./icons/RabbitMQ-Dark.svg" width="48">    |
 |      `rails`       |       <img src="./icons/Rails.svg" width="48">        |
+|     `rancher`      |    <img src="./icons/Rancher-Dark.svg" width="48">    |
 |   `raspberrypi`    |  <img src="./icons/RaspberryPi-Dark.svg" width="48">  |
 |      `react`       |     <img src="./icons/React-Dark.svg" width="48">     |
 |    `reactivex`     |   <img src="./icons/ReactiveX-Dark.svg" width="48">   |
@@ -270,36 +314,48 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 |       `ruby`       |        <img src="./icons/Ruby.svg" width="48">        |
 |       `rust`       |        <img src="./icons/Rust.svg" width="48">        |
 |       `sass`       |        <img src="./icons/Sass.svg" width="48">        |
-|      `spring`      |    <img src="./icons/Spring-Dark.svg" width="48">     |
-|      `sqlite`      |       <img src="./icons/SQLite.svg" width="48">       |
-|  `stackoverflow`   | <img src="./icons/StackOverflow-Dark.svg" width="48"> |
-| `styledcomponents` |  <img src="./icons/StyledComponents.svg" width="48">  |
-|     `sublime`      |    <img src="./icons/Sublime-Dark.svg" width="48">    |
-|     `supabase`     |   <img src="./icons/Supabase-Dark.svg" width="48">    |
 |      `scala`       |     <img src="./icons/Scala-Dark.svg" width="48">     |
 |     `sklearn`      |  <img src="./icons/ScikitLearn-Dark.svg" width="48">  |
 |     `selenium`     |      <img src="./icons/Selenium.svg" width="48">      |
 |      `sentry`      |       <img src="./icons/Sentry.svg" width="48">       |
 |    `sequelize`     |   <img src="./icons/Sequelize-Dark.svg" width="48">   |
 |     `sketchup`     |   <img src="./icons/Sketchup-Dark.svg" width="48">    |
+|      `slack`       |     <img src="./icons/Slack-Dark.svg" width="48">     |
+|    `snowflake`     |   <img src="./icons/Snowflake-Dark.svg" width="48">   |
 |     `solidity`     |      <img src="./icons/Solidity.svg" width="48">      |
 |     `solidjs`      |    <img src="./icons/SolidJS-Dark.svg" width="48">    |
+|    `sonarqube`     |   <img src="./icons/SonarQube-Dark.svg" width="48">   |
+|      `spark`       |     <img src="./icons/Spark-Dark.svg" width="48">     |
+|      `splunk`      |    <img src="./icons/Splunk-Dark.svg" width="48">     |
+|      `spring`      |    <img src="./icons/Spring-Dark.svg" width="48">     |
+|      `sqlite`      |       <img src="./icons/SQLite.svg" width="48">       |
+|  `stackoverflow`   | <img src="./icons/StackOverflow-Dark.svg" width="48"> |
+|    `streamlit`     |   <img src="./icons/Streamlit-Dark.svg" width="48">   |
+| `styledcomponents` |  <img src="./icons/StyledComponents.svg" width="48">  |
+|     `sublime`      |    <img src="./icons/Sublime-Dark.svg" width="48">    |
+|     `supabase`     |   <img src="./icons/Supabase-Dark.svg" width="48">    |
+|     `superset`     |   <img src="./icons/Superset-Dark.svg" width="48">    |
 |      `svelte`      |       <img src="./icons/Svelte.svg" width="48">       |
 |       `svg`        |      <img src="./icons/SVG-Dark.svg" width="48">      |
 |      `swift`       |       <img src="./icons/Swift.svg" width="48">        |
 |     `symfony`      |    <img src="./icons/Symfony-Dark.svg" width="48">    |
+|     `tableau`      |    <img src="./icons/Tableau-Dark.svg" width="48">    |
 |     `tailwind`     |  <img src="./icons/TailwindCSS-Dark.svg" width="48">  |
 |      `tauri`       |     <img src="./icons/Tauri-Dark.svg" width="48">     |
+|      `teams`       |     <img src="./icons/Teams-Dark.svg" width="48">     |
 |    `tensorflow`    |  <img src="./icons/TensorFlow-Dark.svg" width="48">   |
 |    `terraform`     |   <img src="./icons/Terraform-Dark.svg" width="48">   |
 |     `threejs`      |    <img src="./icons/ThreeJS-Dark.svg" width="48">    |
+|     `travisci`     |   <img src="./icons/TravisCI-Dark.svg" width="48">    |
 |     `twitter`      |      <img src="./icons/Twitter.svg" width="48">       |
 |        `ts`        |     <img src="./icons/TypeScript.svg" width="48">     |
 |      `ubuntu`      |    <img src="./icons/Ubuntu-Dark.svg" width="48">     |
 |      `unity`       |     <img src="./icons/Unity-Dark.svg" width="48">     |
 |      `unreal`      |    <img src="./icons/UnrealEngine.svg" width="48">    |
 |        `v`         |       <img src="./icons/V-Dark.svg" width="48">       |
+|     `vagrant`      |    <img src="./icons/Vagrant-Dark.svg" width="48">    |
 |       `vala`       |        <img src="./icons/Vala.svg" width="48">        |
+|      `vault`       |     <img src="./icons/Vault-Dark.svg" width="48">     |
 |      `vercel`      |    <img src="./icons/Vercel-Dark.svg" width="48">     |
 |       `vim`        |      <img src="./icons/VIM-Dark.svg" width="48">      |
 |   `visualstudio`   | <img src="./icons/VisualStudio-Dark.svg" width="48">  |
@@ -324,10 +380,22 @@ Here's a list of all the icons currently supported. Feel free to open an issue t
 
 ---
 
-## 💖 Support the Project
+## Acknowledgments
 
-Thank you so much already for using my projects! If you want to go a step further and support my open source work, buy me a coffee:
+TechBadges is a fork of [skill-icons](https://github.com/tandpfun/skill-icons), originally created by [@tandpfun](https://github.com/tandpfun). We are grateful for the foundation this project provided and the amazing work done by the original author and contributors.
 
-<a href='https://ko-fi.com/Q5Q860KQ2' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+If you appreciate this project, please also consider supporting the original:
+- [skill-icons on GitHub](https://github.com/tandpfun/skill-icons)
+- [Support @tandpfun on Ko-fi](https://ko-fi.com/tandpfun)
 
-To support the project directly, feel free to open issues for icon suggestions, or contribute with a pull request!
+## Contributing
+
+Contributions are welcome! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Maintainer
+
+Maintained by [@santosr2](https://github.com/santosr2)
