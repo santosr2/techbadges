@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    :root {
+      --pico-font-size: 16px;
+    }
+    body {
+      padding: 0;
+    }
+    header.hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header.hero h1 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    header.hero p {
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    nav.main-nav {
+      background: #1a1a2e;
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav.main-nav ul {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    nav.main-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    nav.main-nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    footer {
+      background: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #a5b4fc;
+    }
+    table {
+      font-size: 0.9rem;
+    }
+    pre {
+      background: #1e1e2e;
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    code {
+      font-size: 0.85rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .badge-preview img {
+      background: #242938;
+      border-radius: 8px;
+      padding: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+    <a href="https://techbadges.santosr2.xyz/icons?i=js,ts,react,python,docker,kubernetes" target="_blank">
+      <img src="https://techbadges.santosr2.xyz/icons?i=js,ts,react,python,docker,kubernetes&perline=6" alt="TechBadges Preview" style="max-width: 400px;">
+    </a>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ site.baseurl }}/">Home</a></li>
+      <li><a href="{{ site.baseurl }}/getting-started">Getting Started</a></li>
+      <li><a href="{{ site.baseurl }}/api">API</a></li>
+      <li><a href="{{ site.baseurl }}/icons">Icons</a></li>
+      <li><a href="https://github.com/santosr2/techbadges" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>
+      <strong>TechBadges</strong> - A fork of
+      <a href="https://github.com/tandpfun/skill-icons">skill-icons</a> by
+      <a href="https://github.com/tandpfun">@tandpfun</a>
+    </p>
+    <p>
+      <a href="https://github.com/santosr2/techbadges">GitHub</a> |
+      <a href="https://techbadges.santosr2.xyz">API</a> |
+      MIT License
+    </p>
+  </footer>
+</body>
+</html>

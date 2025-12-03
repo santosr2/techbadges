@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/santosr2/techbadges.git"
   },
-  "homepage": "https://techbadges.dev",
+  "homepage": "https://techbadges.santosr2.xyz",
   "bugs": {
     "url": "https://github.com/santosr2/techbadges/issues"
   },
@@ -25,7 +25,15 @@
     "type": "ko-fi",
     "url": "https://ko-fi.com/tandpfun"
   },
-  "keywords": ["icons", "skills", "github", "readme", "svg", "cloudflare-workers", "developer-tools"],
+  "keywords": [
+    "icons",
+    "skills",
+    "github",
+    "readme",
+    "svg",
+    "cloudflare-workers",
+    "developer-tools"
+  ],
   "scripts": {
     "dev": "wrangler dev",
     "build": "bun run scripts/build.ts",

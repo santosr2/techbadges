@@ -24,7 +24,7 @@ vars = { ENVIRONMENT = "staging" }
 command = "bun run build"
 
 # Uncomment and configure for production deployment
-# route = { pattern = "techbadges.dev/*", zone_name = "techbadges.dev" }
+# route = { pattern = "techbadges.santosr2.xyz/*", zone_name = "santosr2.xyz" }
 
 # Uncomment to enable KV caching (optional)
 # [[kv_namespaces]]

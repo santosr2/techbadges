@@ -48,7 +48,7 @@ interface HealthResponse {
 describe('Worker Integration Tests', () => {
   describe('Root endpoint /', () => {
     it('should return API info JSON', async () => {
-      const request = new Request('https://techbadges.dev/');
+      const request = new Request('https://techbadges.santosr2.xyz/');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(200);
@@ -61,7 +61,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should include cache headers', async () => {
-      const request = new Request('https://techbadges.dev/');
+      const request = new Request('https://techbadges.santosr2.xyz/');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.headers.get('Cache-Control')).toContain('max-age=');
@@ -70,7 +70,7 @@ describe('Worker Integration Tests', () => {
 
   describe('Icons endpoint /icons', () => {
     it('should generate SVG for valid icons', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=js,ts,react');
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=js,ts,react');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(200);
@@ -82,7 +82,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should return 400 for missing icons parameter', async () => {
-      const request = new Request('https://techbadges.dev/icons');
+      const request = new Request('https://techbadges.santosr2.xyz/icons');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(400);
@@ -92,11 +92,11 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should support theme parameter', async () => {
-      const darkRequest = new Request('https://techbadges.dev/icons?i=github&t=dark');
+      const darkRequest = new Request('https://techbadges.santosr2.xyz/icons?i=github&t=dark');
       const darkResponse = await worker.fetch(darkRequest, createEnv(), createMockContext());
       const darkSvg = await darkResponse.text();
 
-      const lightRequest = new Request('https://techbadges.dev/icons?i=github&t=light');
+      const lightRequest = new Request('https://techbadges.santosr2.xyz/icons?i=github&t=light');
       const lightResponse = await worker.fetch(lightRequest, createEnv(), createMockContext());
       const lightSvg = await lightResponse.text();
 
@@ -105,7 +105,7 @@ describe('Worker Integration Tests', () => {
 
     it('should support perline parameter', async () => {
       const request = new Request(
-        'https://techbadges.dev/icons?i=js,ts,react,vue,angular&perline=5'
+        'https://techbadges.santosr2.xyz/icons?i=js,ts,react,vue,angular&perline=5'
       );
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
@@ -116,12 +116,12 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should handle ETag-based caching', async () => {
-      const request1 = new Request('https://techbadges.dev/icons?i=js');
+      const request1 = new Request('https://techbadges.santosr2.xyz/icons?i=js');
       const response1 = await worker.fetch(request1, createEnv(), createMockContext());
       const etag = response1.headers.get('ETag');
       expect(etag).toBeDefined();
 
-      const request2 = new Request('https://techbadges.dev/icons?i=js', {
+      const request2 = new Request('https://techbadges.santosr2.xyz/icons?i=js', {
         headers: { 'If-None-Match': etag ?? '' },
       });
       const response2 = await worker.fetch(request2, createEnv(), createMockContext());
@@ -130,14 +130,14 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should skip invalid icons and use valid ones', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=js,invalidicon,ts');
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=js,invalidicon,ts');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(200);
     });
 
     it('should return 400 when all icons are invalid', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=invalid1,invalid2');
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=invalid1,invalid2');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(400);
@@ -146,7 +146,7 @@ describe('Worker Integration Tests', () => {
 
   describe('API endpoints', () => {
     it('GET /api/icons should return icon list', async () => {
-      const request = new Request('https://techbadges.dev/api/icons');
+      const request = new Request('https://techbadges.santosr2.xyz/api/icons');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(200);
@@ -158,7 +158,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('GET /api/svgs should return SVG map', async () => {
-      const request = new Request('https://techbadges.dev/api/svgs');
+      const request = new Request('https://techbadges.santosr2.xyz/api/svgs');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(200);
@@ -172,7 +172,7 @@ describe('Worker Integration Tests', () => {
 
   describe('Health endpoint /health', () => {
     it('should return health status', async () => {
-      const request = new Request('https://techbadges.dev/health');
+      const request = new Request('https://techbadges.santosr2.xyz/health');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(200);
@@ -185,7 +185,7 @@ describe('Worker Integration Tests', () => {
 
   describe('CORS handling', () => {
     it('should handle OPTIONS preflight requests', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=js', {
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=js', {
         method: 'OPTIONS',
       });
       const response = await worker.fetch(request, createEnv(), createMockContext());
@@ -196,7 +196,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should include CORS headers on regular requests', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=js');
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=js');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.headers.get('Access-Control-Allow-Origin')).toBe('*');
@@ -205,7 +205,7 @@ describe('Worker Integration Tests', () => {
 
   describe('Error handling', () => {
     it('should return 404 for unknown endpoints', async () => {
-      const request = new Request('https://techbadges.dev/unknown');
+      const request = new Request('https://techbadges.santosr2.xyz/unknown');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(404);
@@ -215,7 +215,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should return proper JSON error structure', async () => {
-      const request = new Request('https://techbadges.dev/icons');
+      const request = new Request('https://techbadges.santosr2.xyz/icons');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       const json = (await response.json()) as ErrorResponse;
@@ -225,7 +225,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should include stack trace in development mode', async () => {
-      const request = new Request('https://techbadges.dev/icons');
+      const request = new Request('https://techbadges.santosr2.xyz/icons');
       const response = await worker.fetch(request, createEnv('development'), createMockContext());
 
       const json = (await response.json()) as ErrorResponse;
@@ -233,7 +233,7 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should not include stack trace in production mode', async () => {
-      const request = new Request('https://techbadges.dev/icons');
+      const request = new Request('https://techbadges.santosr2.xyz/icons');
       const response = await worker.fetch(request, createEnv('production'), createMockContext());
 
       const json = (await response.json()) as ErrorResponse;
@@ -243,14 +243,14 @@ describe('Worker Integration Tests', () => {
 
   describe('Input validation', () => {
     it('should reject invalid theme values', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=js&t=invalid');
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=js&t=invalid');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(400);
     });
 
     it('should reject out-of-range perline values', async () => {
-      const request = new Request('https://techbadges.dev/icons?i=js&perline=100');
+      const request = new Request('https://techbadges.santosr2.xyz/icons?i=js&perline=100');
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(400);
@@ -259,7 +259,7 @@ describe('Worker Integration Tests', () => {
     it('should enforce maximum icon limit', async () => {
       // Create request with 101 icons
       const icons = Array(101).fill('js').join(',');
-      const request = new Request(`https://techbadges.dev/icons?i=${icons}`);
+      const request = new Request(`https://techbadges.santosr2.xyz/icons?i=${icons}`);
       const response = await worker.fetch(request, createEnv(), createMockContext());
 
       expect(response.status).toBe(400);
@@ -271,11 +271,11 @@ describe('Worker Integration Tests', () => {
 
   describe('Icon aliases', () => {
     it('should resolve js to javascript', async () => {
-      const jsRequest = new Request('https://techbadges.dev/icons?i=js');
+      const jsRequest = new Request('https://techbadges.santosr2.xyz/icons?i=js');
       const jsResponse = await worker.fetch(jsRequest, createEnv(), createMockContext());
       const jsSvg = await jsResponse.text();
 
-      const javascriptRequest = new Request('https://techbadges.dev/icons?i=javascript');
+      const javascriptRequest = new Request('https://techbadges.santosr2.xyz/icons?i=javascript');
       const javascriptResponse = await worker.fetch(
         javascriptRequest,
         createEnv(),
@@ -287,11 +287,11 @@ describe('Worker Integration Tests', () => {
     });
 
     it('should resolve ts to typescript', async () => {
-      const tsRequest = new Request('https://techbadges.dev/icons?i=ts');
+      const tsRequest = new Request('https://techbadges.santosr2.xyz/icons?i=ts');
       const tsResponse = await worker.fetch(tsRequest, createEnv(), createMockContext());
       const tsSvg = await tsResponse.text();
 
-      const typescriptRequest = new Request('https://techbadges.dev/icons?i=typescript');
+      const typescriptRequest = new Request('https://techbadges.santosr2.xyz/icons?i=typescript');
       const typescriptResponse = await worker.fetch(
         typescriptRequest,
         createEnv(),
