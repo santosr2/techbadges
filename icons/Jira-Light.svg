@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#E9F2FF" rx="60"/>
+  <g transform="translate(128,128)">
+    <!-- Jira logo - two overlapping shapes -->
+    <path fill="#2684FF" d="M5,-65 L70,0 L5,65 L-25,35 L10,0 L-25,-35 Z"/>
+    <path fill="url(#jiraGrad1L)" d="M-5,-65 L-5,0 L-40,-35 Z"/>
+    <path fill="url(#jiraGrad2L)" d="M-5,65 L-5,0 L-40,35 Z"/>
+    <path fill="#2684FF" d="M-5,-65 L-70,0 L-5,65 L25,35 L-10,0 L25,-35 Z"/>
+  </g>
+  <defs>
+    <linearGradient id="jiraGrad1L" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052CC"/>
+      <stop offset="100%" stop-color="#2684FF"/>
+    </linearGradient>
+    <linearGradient id="jiraGrad2L" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052CC"/>
+      <stop offset="100%" stop-color="#2684FF"/>
+    </linearGradient>
+  </defs>
+</svg>

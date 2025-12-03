@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#242938" rx="60"/>
+  <g transform="translate(128,128)">
+    <!-- Pulumi logo - stacked cubes -->
+    <g fill="#8A3391">
+      <!-- Top cube -->
+      <path d="M0,-70 L40,-50 L40,-10 L0,-30 L-40,-10 L-40,-50 Z"/>
+      <!-- Middle left -->
+      <path d="M-45,-5 L-5,15 L-5,55 L-45,35 Z"/>
+      <!-- Middle right -->
+      <path d="M45,-5 L5,15 L5,55 L45,35 Z"/>
+      <!-- Bottom -->
+      <path d="M0,25 L40,45 L40,75 L0,55 L-40,75 L-40,45 Z"/>
+    </g>
+    <!-- Highlights -->
+    <g fill="#B487B8">
+      <path d="M0,-70 L40,-50 L0,-30 L-40,-50 Z"/>
+      <path d="M0,25 L40,45 L0,65 L-40,45 Z"/>
+    </g>
+  </g>
+</svg>

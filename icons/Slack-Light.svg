@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#F8F8F8" rx="60"/>
+  <g transform="translate(128,128)">
+    <!-- Slack logo - 4 colored sections -->
+    <!-- Top left - green/teal -->
+    <rect x="-55" y="-55" width="22" height="55" rx="11" fill="#2EB67D"/>
+    <rect x="-55" y="-55" width="55" height="22" rx="11" fill="#2EB67D"/>
+    <circle cx="-66" cy="-22" r="11" fill="#2EB67D"/>
+    <!-- Top right - red/pink -->
+    <rect x="33" y="-55" width="22" height="55" rx="11" fill="#E01E5A"/>
+    <rect x="0" y="-55" width="55" height="22" rx="11" fill="#E01E5A"/>
+    <circle cx="66" cy="-22" r="11" fill="#E01E5A"/>
+    <!-- Bottom left - yellow -->
+    <rect x="-55" y="0" width="22" height="55" rx="11" fill="#ECB22E"/>
+    <rect x="-55" y="33" width="55" height="22" rx="11" fill="#ECB22E"/>
+    <circle cx="-66" cy="22" r="11" fill="#ECB22E"/>
+    <!-- Bottom right - blue -->
+    <rect x="33" y="0" width="22" height="55" rx="11" fill="#36C5F0"/>
+    <rect x="0" y="33" width="55" height="22" rx="11" fill="#36C5F0"/>
+    <circle cx="66" cy="22" r="11" fill="#36C5F0"/>
+  </g>
+</svg>

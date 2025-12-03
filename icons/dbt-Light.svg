@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#FFF0ED" rx="60"/>
+  <g transform="translate(128,128)">
+    <!-- dbt logo - orange hexagon with arrow -->
+    <path fill="#FF694A" d="M0,-75 L65,-37.5 L65,37.5 L0,75 L-65,37.5 L-65,-37.5 Z"/>
+    <!-- Arrow pointing right -->
+    <path fill="#fff" d="M-30,-25 L25,-25 L25,-40 L55,0 L25,40 L25,25 L-30,25 Z"/>
+  </g>
+</svg>
