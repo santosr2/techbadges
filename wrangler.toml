@@ -1,32 +1,53 @@
+# TechBadges - Cloudflare Workers Configuration
+# https://developers.cloudflare.com/workers/wrangler/configuration/
+
 name = "techbadges"
 main = "src/index.ts"
 compatibility_date = "2024-11-01"
 compatibility_flags = ["nodejs_compat"]
 
-# Observability
+# Enable workers.dev subdomain
+workers_dev = true
+
+# Observability (logging)
 [observability]
 enabled = true
 
-# Production environment variables
+# =============================================================================
+# Production (default environment)
+# =============================================================================
 [vars]
 ENVIRONMENT = "production"
 
-# Development environment
-[env.development]
-vars = { ENVIRONMENT = "development" }
+# KV caching for production
+# To create: bunx wrangler kv namespace create ICON_CACHE
+# Then paste the id below
+[[kv_namespaces]]
+binding = "ICON_CACHE"
+id = "6a4449cf3e6141cca5ba7245ee1d2caa"
 
-# Staging environment (optional)
+# =============================================================================
+# Staging environment (deploy with: bunx wrangler deploy --env staging)
+# =============================================================================
 [env.staging]
+name = "techbadges-staging"
 vars = { ENVIRONMENT = "staging" }
 
-# Build configuration
-[build]
-command = "bun run build"
-
-# Uncomment and configure for production deployment
-# route = { pattern = "techbadges.santosr2.xyz/*", zone_name = "santosr2.xyz" }
-
-# Uncomment to enable KV caching (optional)
-# [[kv_namespaces]]
+# KV caching for staging
+# To create: bunx wrangler kv namespace create ICON_CACHE --env staging
+# [[env.staging.kv_namespaces]]
 # binding = "ICON_CACHE"
-# id = "your-kv-namespace-id"
+# id = "<paste-staging-kv-id-here>"
+
+# =============================================================================
+# Development environment (deploy with: bunx wrangler deploy --env development)
+# =============================================================================
+[env.development]
+name = "techbadges-dev"
+vars = { ENVIRONMENT = "development" }
+
+# KV caching for development
+# To create: bunx wrangler kv namespace create ICON_CACHE --env development
+# [[env.development.kv_namespaces]]
+# binding = "ICON_CACHE"
+# id = "<paste-dev-kv-id-here>"
