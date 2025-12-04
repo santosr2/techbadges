@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://techbadges.santosr2.xyz
+      url: https://techbadges.santosr.xyz
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,4 +43,4 @@ jobs:
       - name: Health check
         run: |
           sleep 10
-          curl -sf https://techbadges.santosr2.xyz/health || echo "Health check pending"
+          curl -sf https://techbadges.santosr.xyz/health || echo "Health check pending"

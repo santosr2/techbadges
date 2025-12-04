@@ -11,12 +11,12 @@ description: Learn how to use TechBadges to showcase your skills
 To display icons in your README, use the following markdown:
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=js,html,css,wasm)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=js,html,css,wasm)](https://techbadges.santosr.xyz)
 ```
 
 **Result:**
 
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=js,html,css,wasm)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=js,html,css,wasm)](https://techbadges.santosr.xyz)
 
 ## Parameters
 
@@ -33,28 +33,28 @@ Many icons have dark and light variants. The theme affects the background color:
 **Dark Theme (default):**
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=github,vscode,docker&theme=dark)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=github,vscode,docker&theme=dark)](https://techbadges.santosr.xyz)
 ```
 
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=github,vscode,docker&theme=dark)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=github,vscode,docker&theme=dark)](https://techbadges.santosr.xyz)
 
 **Light Theme:**
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=github,vscode,docker&theme=light)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=github,vscode,docker&theme=light)](https://techbadges.santosr.xyz)
 ```
 
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=github,vscode,docker&theme=light)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=github,vscode,docker&theme=light)](https://techbadges.santosr.xyz)
 
 ## Icons Per Line
 
 Control the number of icons displayed per row:
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=js,ts,react,vue,angular,svelte&perline=3)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=js,ts,react,vue,angular,svelte&perline=3)](https://techbadges.santosr.xyz)
 ```
 
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=js,ts,react,vue,angular,svelte&perline=3)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=js,ts,react,vue,angular,svelte&perline=3)](https://techbadges.santosr.xyz)
 
 ## Centering Icons
 
@@ -62,15 +62,15 @@ To center icons in your README:
 
 ```html
 <p align="center">
-  <a href="https://techbadges.santosr2.xyz">
-    <img src="https://techbadges.santosr2.xyz/icons?i=git,kubernetes,docker,aws,gcp" />
+  <a href="https://techbadges.santosr.xyz">
+    <img src="https://techbadges.santosr.xyz/icons?i=git,kubernetes,docker,aws,gcp" />
   </a>
 </p>
 ```
 
 <p align="center">
-  <a href="https://techbadges.santosr2.xyz">
-    <img src="https://techbadges.santosr2.xyz/icons?i=git,kubernetes,docker,aws,gcp" />
+  <a href="https://techbadges.santosr.xyz">
+    <img src="https://techbadges.santosr.xyz/icons?i=git,kubernetes,docker,aws,gcp" />
   </a>
 </p>
 
@@ -92,19 +92,19 @@ Some icons have short aliases for convenience:
 ### Full Stack Developer
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=react,nodejs,typescript,postgresql,docker,aws&perline=6)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=react,nodejs,typescript,postgresql,docker,aws&perline=6)](https://techbadges.santosr.xyz)
 ```
 
 ### DevOps Engineer
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=kubernetes,docker,terraform,ansible,jenkins,prometheus&perline=6)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=kubernetes,docker,terraform,ansible,jenkins,prometheus&perline=6)](https://techbadges.santosr.xyz)
 ```
 
 ### Data Scientist
 
 ```markdown
-[![My Skills](https://techbadges.santosr2.xyz/icons?i=python,pytorch,tensorflow,jupyter,pandas,numpy&perline=6)](https://techbadges.santosr2.xyz)
+[![My Skills](https://techbadges.santosr.xyz/icons?i=python,pytorch,tensorflow,jupyter,pandas,numpy&perline=6)](https://techbadges.santosr.xyz)
 ```
 
 ## Next Steps

@@ -6,7 +6,7 @@ description: TechBadges API endpoints and parameters
 
 # API Reference
 
-Base URL: `https://techbadges.santosr2.xyz`
+Base URL: `https://techbadges.santosr.xyz`
 
 ## Endpoints
 
@@ -162,11 +162,11 @@ The `/icons` endpoint supports conditional requests using ETags:
 
 ```bash
 # First request
-curl -I "https://techbadges.santosr2.xyz/icons?i=js"
+curl -I "https://techbadges.santosr.xyz/icons?i=js"
 # Returns: ETag: "abc123"
 
 # Subsequent request
-curl -H "If-None-Match: \"abc123\"" "https://techbadges.santosr2.xyz/icons?i=js"
+curl -H "If-None-Match: \"abc123\"" "https://techbadges.santosr.xyz/icons?i=js"
 # Returns: 304 Not Modified (if unchanged)
 ```
 

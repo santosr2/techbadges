@@ -2,7 +2,7 @@
  * TechBadges - Cloudflare Worker Entry Point
  *
  * Generates SVG icon grids for GitHub profiles and resumes.
- * https://techbadges.santosr2.xyz
+ * https://techbadges.santosr.xyz
  */
 
 import { handleApiIcons, handleApiSvgs } from './handlers/api.js';

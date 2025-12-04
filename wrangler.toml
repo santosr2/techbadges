@@ -10,7 +10,9 @@ compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 
 # Custom domain
-route = { pattern = "techbadges.santosr.xyz/*", zone_id = "1e8f3f0b25d49caf7a9f12d7a263c6ef" }
+[route]
+pattern = "techbadges.santosr.xyz/*"
+zone_id = "1e8f3f0b25d49caf7a9f12d7a263c6ef"
 
 # Observability (logging)
 [observability]
