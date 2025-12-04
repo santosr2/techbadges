@@ -9,6 +9,9 @@ compatibility_flags = ["nodejs_compat"]
 # Enable workers.dev subdomain
 workers_dev = true
 
+# Custom domain
+route = { pattern = "techbadges.santosr2.xyz/*", zone_name = "santosr2.xyz" }
+
 # Observability (logging)
 [observability]
 enabled = true
