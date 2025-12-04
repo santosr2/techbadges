@@ -49,10 +49,10 @@ describe('handleHealth', () => {
     expect(response.headers.get('Cache-Control')).toBe('no-store');
   });
 
-  it('should return version 2.0.0', async () => {
+  it('should return version 1.0.0', async () => {
     const response = handleHealth();
     const data = (await response.json()) as HealthResponse;
 
-    expect(data.version).toBe('2.0.0');
+    expect(data.version).toBe('1.0.0');
   });
 });

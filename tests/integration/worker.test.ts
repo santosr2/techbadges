@@ -56,7 +56,7 @@ describe('Worker Integration Tests', () => {
 
       const json = (await response.json()) as ApiInfoResponse;
       expect(json.name).toBe('TechBadges');
-      expect(json.version).toBe('2.0.0');
+      expect(json.version).toBe('1.0.0');
       expect(json.endpoints).toBeDefined();
     });
 

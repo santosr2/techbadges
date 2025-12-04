@@ -2,13 +2,19 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
+  workflow_dispatch:
+
+# Cancel in-progress runs for the same workflow and branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  lint:
-    name: Lint & Type Check
+  quality:
+    name: Code Quality
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,17 +28,17 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Build icons (required for type checking)
-        run: mise run build
+      - name: Lint
+        run: bun run lint
 
-      - name: Run Biome
-        run: mise run lint
+      - name: Format check
+        run: bun run format:check
 
       - name: Type check
-        run: mise run typecheck
+        run: bun run typecheck
 
   test:
-    name: Test
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,13 +52,20 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Build icons
-        run: mise run build
+      - name: Build
+        run: bun run build
 
       - name: Run tests
-        run: mise run test
+        run: bun run test:coverage
 
-  validate-icons:
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        if: always()
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
+
+  validate:
     name: Validate Icons
     runs-on: ubuntu-latest
     steps:
@@ -68,12 +81,15 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Validate icons
-        run: mise run validate
+        run: bun run validate:icons
+
+      - name: Size report
+        run: bun run size-report
 
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: [lint, test, validate-icons]
+    needs: [quality, test, validate]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -87,41 +103,12 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build
-        run: mise run build
+        run: bun run build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist
-          path: dist/
-          retention-days: 7
-
-  size-report:
-    name: Size Report
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup mise
-        uses: jdx/mise-action@v2
-        with:
-          install: true
-
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Generate size report
-        id: size
-        run: |
-          mise run size-report --output size-report.md
-          echo "## Icon Size Report" >> $GITHUB_STEP_SUMMARY
-          cat size-report.md >> $GITHUB_STEP_SUMMARY
-
-      - name: Upload size report
-        uses: actions/upload-artifact@v4
-        with:
-          name: size-report
-          path: size-report.md
+          name: build-artifacts
+          path: |
+            dist/
           retention-days: 7

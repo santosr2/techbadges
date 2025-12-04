@@ -43,7 +43,7 @@ async function handleRequest(request: Request, _env: Env): Promise<Response> {
       return new Response(
         JSON.stringify({
           name: 'TechBadges',
-          version: '2.0.0',
+          version: '1.0.0',
           description: 'Showcase your tech stack on your GitHub or resume',
           documentation: 'https://github.com/santosr2/techbadges',
           attribution: {

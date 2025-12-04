@@ -21,7 +21,7 @@ export function handleHealth(): Response {
 
   const response: HealthResponse = {
     status: iconCount > 0 ? 'ok' : 'degraded',
-    version: '2.0.0',
+    version: '1.0.0',
     iconCount,
     timestamp: new Date().toISOString(),
   };

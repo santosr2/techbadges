@@ -108,7 +108,7 @@ GET /health
 ```json
 {
   "status": "ok",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "icons": 290,
   "timestamp": "2025-01-01T00:00:00.000Z"
 }
@@ -131,7 +131,7 @@ GET /
 ```json
 {
   "name": "TechBadges",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Showcase your tech stack on your GitHub or resume",
   "documentation": "https://github.com/santosr2/techbadges",
   "attribution": {
