@@ -5,6 +5,56 @@
 import { GRID_CELL, GRID_GAP, SCALE } from '../config/constants.js';
 
 /**
+ * Format icon name for display (remove theme suffix, format nicely)
+ */
+function formatDisplayName(iconName: string): string {
+  // Remove theme suffix (-dark, -light)
+  const baseName = iconName.replace(/-(dark|light)$/i, '');
+
+  // Special cases for common names
+  const specialCases: Record<string, string> = {
+    javascript: 'JavaScript',
+    typescript: 'TypeScript',
+    nodejs: 'Node.js',
+    vuejs: 'Vue.js',
+    nuxtjs: 'Nuxt.js',
+    nextjs: 'Next.js',
+    nestjs: 'NestJS',
+    expressjs: 'Express.js',
+    dotnet: '.NET',
+    cpp: 'C++',
+    cs: 'C#',
+    mongodb: 'MongoDB',
+    postgresql: 'PostgreSQL',
+    mysql: 'MySQL',
+    graphql: 'GraphQL',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    vscode: 'VS Code',
+    webassembly: 'WebAssembly',
+    openai: 'OpenAI',
+    pytorch: 'PyTorch',
+    tensorflow: 'TensorFlow',
+    aws: 'AWS',
+    gcp: 'GCP',
+    dbt: 'dbt',
+    airflow: 'Airflow',
+    powershell: 'PowerShell',
+    linkedin: 'LinkedIn',
+    stackoverflow: 'Stack Overflow',
+    huggingface: 'Hugging Face',
+    langchain: 'LangChain',
+  };
+
+  if (specialCases[baseName]) {
+    return specialCases[baseName];
+  }
+
+  // Default: capitalize first letter
+  return baseName.charAt(0).toUpperCase() + baseName.slice(1);
+}
+
+/**
  * Generate an SVG grid containing multiple icons
  *
  * @param iconNames - Array of icon keys to include
@@ -57,8 +107,10 @@ export function generateSvg(
 
     const x = (i % perLine) * GRID_CELL;
     const y = Math.floor(i / perLine) * GRID_CELL;
+    const displayName = formatDisplayName(iconName);
 
-    parts[i + 1] = `<g transform="translate(${x},${y})">${iconSvg}</g>`;
+    parts[i + 1] =
+      `<g transform="translate(${x},${y})"><title>${displayName}</title>${iconSvg}</g>`;
   }
 
   // Closing SVG tag
