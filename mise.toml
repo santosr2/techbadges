@@ -10,11 +10,6 @@ bun = "1.3"
 "pipx:bump-my-version" = "latest"  # Version bumping
 "cargo:git-cliff" = "latest"       # Changelog generation
 
-# Note: mise will install these tools automatically via:
-# - bump-my-version: via pipx backend (isolated Python app)
-# - git-cliff: via cargo backend
-# Run: mise install to install all tools
-
 [tasks.install]
 description = "Install dependencies"
 run = "bun install"
