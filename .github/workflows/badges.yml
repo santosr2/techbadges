@@ -1,0 +1,31 @@
+name: Badges
+
+on:
+  schedule:
+    # Update badges daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-badges:
+    name: Update README Badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update badges
+        run: |
+          echo "Badges are automatically updated via shields.io"
+          echo "No action needed - badges pull live data"
+
+      - name: Badge Summary
+        run: |
+          echo "## Badge Status" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All badges are configured and pulling live data from:" >> $GITHUB_STEP_SUMMARY
+          echo "- GitHub Actions (workflow status)" >> $GITHUB_STEP_SUMMARY
+          echo "- Codecov (code coverage)" >> $GITHUB_STEP_SUMMARY
+          echo "- GitHub (latest release)" >> $GITHUB_STEP_SUMMARY
+          echo "- GitHub (license)" >> $GITHUB_STEP_SUMMARY
+

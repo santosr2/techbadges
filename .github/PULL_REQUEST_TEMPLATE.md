@@ -1,56 +1,61 @@
 ## Description
 
-<!-- Describe your changes in detail -->
-
-## Related Issue
-
-<!-- Link to the issue this PR addresses, if applicable -->
-<!-- Fixes #123 or Closes #123 -->
+<!-- Provide a brief description of the changes in this PR -->
 
 ## Type of Change
 
-<!-- Mark the relevant option with an [x] -->
+<!-- Mark the relevant option with an "x" -->
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Icon addition/update
-- [ ] Documentation update
-- [ ] Refactoring (no functional changes)
-- [ ] CI/CD or build changes
-- [ ] Other (please describe):
+- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
+- [ ] ✨ New feature (non-breaking change which adds functionality)
+- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] 📝 Documentation update
+- [ ] 🎨 Style/UI change
+- [ ] ♻️ Code refactoring
+- [ ] ⚡ Performance improvement
+- [ ] 🧪 Test update
+- [ ] 🔧 Configuration change
+- [ ] 🔒 Security fix
 
-## Checklist
+## Related Issues
 
-<!-- Mark completed items with an [x] -->
+<!-- Link to related issues using #issue_number -->
 
-### Code Quality
-- [ ] My code follows the project's code style
-- [ ] I have run `bun run lint` and fixed any issues
-- [ ] I have run `bun run format` to format my code
-- [ ] I have run `bun run typecheck` with no errors
+Closes #
 
-### Testing
-- [ ] I have added tests that prove my fix/feature works
-- [ ] All existing tests pass (`bun test`)
-- [ ] I have tested my changes locally
+## Changes Made
 
-### Documentation
-- [ ] I have updated relevant documentation
-- [ ] I have added comments for complex code sections
-- [ ] My commit messages follow the conventional commit format
+<!-- List the specific changes made in this PR -->
 
-### Icon Contributions Only
-- [ ] My icon follows the [Icon Guidelines](./docs/ICON_GUIDELINES.md)
-- [ ] Icon dimensions are 256x256 pixels
-- [ ] File size is under 50KB
-- [ ] Both dark and light variants are provided (if themed)
-- [ ] Icon was approved in an issue before this PR
+- 
+- 
+- 
 
 ## Screenshots (if applicable)
 
 <!-- Add screenshots to help explain your changes -->
 
+## Testing
+
+<!-- Describe the tests you ran to verify your changes -->
+
+- [ ] Unit tests pass (`bun test`)
+- [ ] Linting passes (`bun run lint`)
+- [ ] Type checking passes (`bun run typecheck`)
+- [ ] Build succeeds (`bun run build`)
+- [ ] Manual testing completed
+
+## Checklist
+
+- [ ] My code follows the code style of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+- [ ] Any dependent changes have been merged and published
+
 ## Additional Notes
 
-<!-- Add any additional context about the PR here -->
+<!-- Add any additional notes, context, or concerns -->

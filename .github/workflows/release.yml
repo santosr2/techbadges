@@ -1,0 +1,123 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version bump type'
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: 'patch'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup mise
+        uses: jdx/mise-action@v2
+        with:
+          install: true
+          experimental: true  # Enable experimental backends (pipx, cargo)
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump version and generate changelog
+        id: bump_version
+        env:
+          BUMP_TYPE: ${{ github.event.inputs.version }}
+        run: |
+          # Bump version using bump-my-version
+          bump-my-version bump $BUMP_TYPE --allow-dirty
+          
+          # Get new version
+          NEW_VERSION=$(jq -r '.version' package.json)
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "✅ Bumped to version: $NEW_VERSION"
+          
+          # Generate changelog using git-cliff
+          git cliff --tag v${NEW_VERSION} --output CHANGELOG.md
+          
+          # Amend the commit to include changelog
+          git add CHANGELOG.md
+          git commit --amend --no-edit
+
+      - name: Run quality checks
+        run: mise run check
+
+      - name: Build
+        run: mise run build
+
+      - name: Push changes and tags
+        run: |
+          git push origin main
+          git push origin --tags
+
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          NEW_VERSION="${{ steps.bump_version.outputs.new_version }}"
+          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          
+          # Generate release notes using git-cliff
+          if [ -z "$PREV_TAG" ]; then
+            CHANGELOG_CONTENT=$(git cliff --unreleased --strip all)
+          else
+            CHANGELOG_CONTENT=$(git cliff ${PREV_TAG}..v${NEW_VERSION} --strip all)
+          fi
+          
+          # Create full release notes
+          cat > /tmp/release_notes.md << 'EOF'
+          $(echo "$CHANGELOG_CONTENT")
+          
+          ## Installation
+          
+          Add TechBadges to your README:
+          
+          ```markdown
+          [![My Skills](https://techbadges.santosr.xyz/icons?i=js,html,css,wasm)](https://techbadges.santosr.xyz)
+          ```
+          
+          ## What's Changed
+          
+          Full Changelog: https://github.com/santosr2/techbadges/compare/${PREV_TAG}...v${NEW_VERSION}
+          EOF
+          
+          echo "notes_file=/tmp/release_notes.md" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.bump_version.outputs.new_version }}
+          name: Release v${{ steps.bump_version.outputs.new_version }}
+          body_path: ${{ steps.release_notes.outputs.notes_file }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger deployment
+        run: |
+          echo "✅ Release v${{ steps.bump_version.outputs.new_version }} created successfully!"
+          echo "🚀 Deployment will be triggered automatically by the deploy workflow"
+
