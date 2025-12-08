@@ -62,11 +62,11 @@ jobs:
           git add CHANGELOG.md
           git commit --amend --no-edit
 
-      - name: Run quality checks
-        run: mise run check
-
       - name: Build
         run: mise run build
+
+      - name: Run quality checks
+        run: mise run check
 
       - name: Push changes and tags
         run: |
