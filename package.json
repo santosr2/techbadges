@@ -1,6 +1,6 @@
 {
   "name": "techbadges",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Showcase your tech stack on your GitHub or resume with ease - 290+ technology icons",
   "type": "module",
   "main": "src/index.ts",
