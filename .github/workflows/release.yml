@@ -87,16 +87,16 @@ jobs:
           fi
           
           # Create full release notes
-          cat > /tmp/release_notes.md << 'EOF'
-          $(echo "$CHANGELOG_CONTENT")
+          cat > /tmp/release_notes.md << EOF
+          ${CHANGELOG_CONTENT}
           
           ## Installation
           
           Add TechBadges to your README:
           
-          ```markdown
+          \`\`\`markdown
           [![My Skills](https://techbadges.santosr.xyz/icons?i=js,html,css,wasm)](https://techbadges.santosr.xyz)
-          ```
+          \`\`\`
           
           ## What's Changed
           
